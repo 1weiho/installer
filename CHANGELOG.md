@@ -1,6 +1,12 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/installer/compare/v5.31.0...master)
+## [Unreleased](https://github.com/laravel/installer/compare/v5.31.1...master)
+
+## [v5.31.1](https://github.com/laravel/installer/compare/v5.31.0...v5.31.1) - 2026-08-04
+
+* Bump actions/checkout from 7.0.0 to 7.0.1 in the github-actions group by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/laravel/installer/pull/554
+* Run Pint after converting tests to Pest by [@WendellAdriel](https://github.com/WendellAdriel) in https://github.com/laravel/installer/pull/555
+* Use the forms feature from Laravel prompts by [@weitzman](https://github.com/weitzman) in https://github.com/laravel/installer/pull/556
 
 ## [v5.31.0](https://github.com/laravel/installer/compare/v5.30.0...v5.31.0) - 2026-07-16
 
