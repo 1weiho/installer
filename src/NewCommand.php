@@ -423,6 +423,15 @@ class NewCommand extends Command
             return;
         }
 
+        if (getenv('LARAVEL_INSTALLER_UPDATE_ATTEMPTED') === '1') {
+            putenv('LARAVEL_INSTALLER_UPDATE_ATTEMPTED');
+
+            $output->writeln('');
+            $output->writeln("  <bg=yellow;fg=black> WARN </> The installer could not be updated to version {$latestVersion}. You may need to update manually. Continuing with the current version...");
+
+            return;
+        }
+
         $output->writeln('');
         $output->writeln("  <bg=yellow;fg=black> WARN </> A new version of the Laravel installer is available. You have version {$version} installed, the latest version is {$latestVersion}.");
 
@@ -499,7 +508,13 @@ class NewCommand extends Command
     protected function proxyLaravelNew(InputInterface $input, OutputInterface $output): void
     {
         $output->writeln('');
-        $this->runCommands(['laravel '.$input], $input, $output, workingPath: getcwd());
+        $this->runCommands(
+            ['laravel '.$input],
+            $input,
+            $output,
+            workingPath: getcwd(),
+            env: ['LARAVEL_INSTALLER_UPDATE_ATTEMPTED' => '1'],
+        );
         exit;
     }
 
