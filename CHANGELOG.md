@@ -1,6 +1,15 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/installer/compare/v5.31.1...master)
+## [Unreleased](https://github.com/laravel/installer/compare/v5.32.0...master)
+
+## [v5.32.0](https://github.com/laravel/installer/compare/v5.31.1...v5.32.0) - 2026-08-25
+
+* [5.x] Ensure Windows gets to use the php artisan dev command by [@jackbayliss](https://github.com/jackbayliss) in https://github.com/laravel/installer/pull/558
+* Prevent installer self-update loop (#510) by [@wakqasahmed](https://github.com/wakqasahmed) in https://github.com/laravel/installer/pull/559
+* Use the selected package manager in the ci:check script in composer.json by [@iz-ahmad](https://github.com/iz-ahmad) in https://github.com/laravel/installer/pull/562
+* Fix build command confirm label leaking raw formatting tags by [@wakqasahmed](https://github.com/wakqasahmed) in https://github.com/laravel/installer/pull/565
+* Revert "Fix build command confirm label leaking raw formatting tags" by [@taylorotwell](https://github.com/taylorotwell) in https://github.com/laravel/installer/pull/566
+* Fix: PHP fatal error in `laravel new` by [@Rahmon](https://github.com/Rahmon) in https://github.com/laravel/installer/pull/567
 
 ## [v5.31.1](https://github.com/laravel/installer/compare/v5.31.0...v5.31.1) - 2026-08-04
 
