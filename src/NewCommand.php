@@ -769,7 +769,7 @@ class NewCommand extends Command
                 $url = $this->generateAppUrl($name, $directory);
                 $getStartedSteps[] = 'Open: '.Element::link($url);
             } else {
-                $getStartedSteps[] = 'composer run dev';
+                $getStartedSteps[] = 'php artisan dev';
             }
 
             if (function_exists('Laravel\Prompts\callout')) {
